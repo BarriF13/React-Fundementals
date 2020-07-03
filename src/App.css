@@ -412,3 +412,7 @@ table th {
     justify-content: center;
   }
 }
+.logo {
+  margin: auto;
+  font-size: 34px;
+}
