@@ -24,15 +24,24 @@
 //2-- after making a class we need to connect it to react so we extends it to react.component
 //3-- we need to render the class--render function 
 //4-- now we need to destructuring so we ass Component on the import line
+
+//5- now we are adding an event
 import React,{Component} from 'react';
 
 
 
 class Header extends Component {
+
     render() {
+
       return ( 
-        <header>
-          <div>Logo</div>
+        
+        <header className="navbar bg-primary">
+          
+          <div 
+          className="logo"
+          onClick={ ()=> {console.log('I have been clicked')}}
+          >Logo</div>
           <input type="text" />
         </header>
       )
