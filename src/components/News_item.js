@@ -19,7 +19,7 @@ export const NewsItem = ({item}) => {
   })
   
   return (
-    <div {...news_style}>
+    <div className= {`${news_style}`}>
       <div>
         <h3>{item.title}</h3>
         <div>
