@@ -93,14 +93,14 @@ import React,{Component} from 'react';
 class Header extends Component {
 
   state = {
-    active: false,
+    active:'active',
     keywords: ''
   }
 
 inputChangeHandler = (event) => {
   // event.preventDefault();
   // for background to change we need to see this is empty or not 
-  const value = event.target.value === ''? false: true;
+  const value = event.target.value === ''? 'active': 'noneActive';
   this.setState({
     active: value,
     keywords: event.target.value
@@ -118,7 +118,7 @@ inputChangeHandler = (event) => {
      return ( 
       
       
-      <header className="navbar bg-primary" style={{background:`${this.state.active ? 'teal' : 'darkblue'}`}}>
+      <header className={this.state.active}>
         
         <div className="logo">Logo</div>
         <input type="text" onClick={this.inputChangeHandler}
