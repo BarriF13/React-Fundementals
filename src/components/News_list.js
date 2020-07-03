@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import NewsItem from './News_item'
+
 //information from other places coming as other props in the () below
 const NewsList = ( props ) => {
 // console.log(props.dog);
