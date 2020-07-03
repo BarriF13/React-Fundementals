@@ -27,19 +27,55 @@
 
 //5- now we are adding an event
 //6- bind(this) is referring to the parent of the function -- if we remove it we then have to use fat arrow function for the child function 
+// import React,{Component} from 'react';
+
+
+
+// class Header extends Component {
+
+//   state = {
+//     keywords: ''
+//   }
+//   inputChangeHandler = (event) => {
+//     event.preventDefault();
+//     //console.log(event.target.value)
+//     // each time we ust this function we set the state and react reload nad 
+//     this.setState({
+//       keywords: event.target.value
+//     })
+//   }
+//     render() {
+//       console.log(this.state.keywords)
+
+//       return ( 
+        
+//         <header className="navbar bg-primary">
+          
+//           <div className="logo">Logo</div>
+//           <input type="text" onClick={this.inputChangeHandler}/>
+//         </header>
+//       )
+//       }
+// }
+
+//----------------
+
 import React,{Component} from 'react';
 
 
 
 class Header extends Component {
+    constructor(props){
+      super(props)
 
-  state = {
-    keywords: ''
-  }
+      this.state = {
+        keywords: ''
+      }
+    }
+ 
   inputChangeHandler = (event) => {
     event.preventDefault();
-    //console.log(event.target.value)
-    // each time we ust this function we set the state and react reload nad 
+  
     this.setState({
       keywords: event.target.value
     })
