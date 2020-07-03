@@ -93,29 +93,32 @@ import React,{Component} from 'react';
 class Header extends Component {
 
   state = {
+    active: false,
     keywords: ''
   }
 
 inputChangeHandler = (event) => {
   // event.preventDefault();
-
+  // for background to change we need to see this is empty or not 
+  const value = event.target.value === ''? false: true;
   this.setState({
+    active: value,
     keywords: event.target.value
   })
 }
   render() {
     //---playing with style
-    const style = {
-      background: ''
-    }
-    if(this.state.keywords !== ''){
-      style.background = 'teal'
-    }
+    // const style = {
+    //   background: ''
+    // }
+    // if(this.state.keywords !== ''){
+    //   style.background = 'teal'
+    // }
 //-------------------
      return ( 
       
       
-      <header className="navbar bg-primary" style={style}>
+      <header className="navbar bg-primary" style={{background:`${this.state.active ? 'teal' : 'darkblue'}`}}>
         
         <div className="logo">Logo</div>
         <input type="text" onClick={this.inputChangeHandler}
