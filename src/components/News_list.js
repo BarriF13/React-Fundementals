@@ -4,10 +4,10 @@ import NewsItem from './News_item'
 const NewsList = ( props ) => {
 // console.log(props.dog);
 
-  const items = props.news.map((item) => {
-
+  const items = props.news.map((itemize) => {
+    //in loop below each time you iterate you need to pass a key on each iteration-- this is from React
     return (
-      <NewsItem  item={item}/>
+      <NewsItem  key={itemize.id} item={itemize}/>
     )
   }); 
   return (

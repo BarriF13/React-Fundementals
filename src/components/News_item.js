@@ -1,13 +1,13 @@
 import React from 'react'
-//we need to say to items below to use the props = data which we grab from other component so we use prop.item.title 
-export const NewsItem = (props) => {
-  console.log(props);
+//we need to say to items below to use the props = data which we grab from other component so we use prop.item.title or rename props with item-- it is like saying ftom the props which is a big object I only want the item 
+export const NewsItem = ({item}) => {
+  // console.log(props);
   return (
     <div>
       <div>
-        <h3>{props.item.title}</h3>
+        <h3>{item.title}</h3>
         <div>
-          {props.item.feed}
+          {item.feed}
         </div>
       </div>
     </div>
