@@ -104,9 +104,18 @@ inputChangeHandler = (event) => {
   })
 }
   render() {
+    //---playing with style
+    const style = {
+      background: ''
+    }
+    if(this.state.keywords !== ''){
+      style.background = 'teal'
+    }
+//-------------------
      return ( 
       
-      <header className="navbar bg-primary">
+      
+      <header className="navbar bg-primary" style={style}>
         
         <div className="logo">Logo</div>
         <input type="text" onClick={this.inputChangeHandler}
