@@ -16,7 +16,10 @@ class App extends Component {
    
       <div className="App">
       <Header />
-      <NewsList news={this.state.news} dog="zaghart"/>
+      <NewsList news={this.state.news} >
+        {/* what ever information we put here will count as part of props */}
+        Hello lolo 
+      </NewsList>
      </div>  
  
     );

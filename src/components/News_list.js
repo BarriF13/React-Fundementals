@@ -13,7 +13,9 @@ const NewsList = ( props ) => {
   return (
     <Fragment>
       {/* <div>{props.news}</div> --wont show because it is an array of object */}
+      {props.children}
       {items}
+      
     </Fragment>
   )
 }
