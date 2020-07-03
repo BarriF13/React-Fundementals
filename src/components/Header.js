@@ -1,5 +1,5 @@
 //--------sample functional component which they only returning something 
-// import React from 'react';
+import React,{Component} from 'react';
 
 // const getYear =()=>{
 //  const newDate = new Date();
@@ -59,40 +59,62 @@
 // }
 
 //----------------
-
-import React,{Component} from 'react';
-
-
-
-class Header extends Component {
-    constructor(props){
-      super(props)
-
-      this.state = {
-        keywords: ''
-      }
-    }
+// class Header extends Component {
+//     state = {
+//       title: 'The keywords are: ',
+//       keywords: ''
+//     }
  
-  inputChangeHandler = (event) => {
-    event.preventDefault();
+//   inputChangeHandler = (event) => {
+//     // event.preventDefault();
   
-    this.setState({
-      keywords: event.target.value
-    })
-  }
-    render() {
-      console.log(this.state.keywords)
+//     this.setState({
+//       keywords: event.target.value
+//     })
+//   }
+//     render() {
+//       console.log(this.state.keywords)
 
-      return ( 
+//       return ( 
         
-        <header className="navbar bg-primary">
+//         <header className="navbar bg-primary">
           
-          <div className="logo">Logo</div>
-          <input type="text" onClick={this.inputChangeHandler}/>
-        </header>
-      )
-      }
-}
+//           <div className="logo">Logo</div>
+//           <input type="text" onClick={this.inputChangeHandler}
+          
+//           />
+//           <div>Title is {this.state.title}</div>
+//           <div>{this.state.keywords}</div>
+//         </header>
+//       )
+//       }
+// }
+//---------------props
+class Header extends Component {
 
+  state = {
+    keywords: ''
+  }
+
+inputChangeHandler = (event) => {
+  // event.preventDefault();
+
+  this.setState({
+    keywords: event.target.value
+  })
+}
+  render() {
+     return ( 
+      
+      <header className="navbar bg-primary">
+        
+        <div className="logo">Logo</div>
+        <input type="text" onClick={this.inputChangeHandler}
+        
+        />
+      </header>
+    )
+    }
+}
 
 export default Header;
