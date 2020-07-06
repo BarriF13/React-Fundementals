@@ -1,5 +1,5 @@
 //--------sample functional component which they only returning something 
-import React,{Component} from 'react';
+// import React,{Component} from 'react';
 
 // const getYear =()=>{
 //  const newDate = new Date();
@@ -90,42 +90,61 @@ import React,{Component} from 'react';
 //       }
 // }
 //---------------props
-class Header extends Component {
+// class Header extends Component {
 
-  state = {
-    keywords: ''
-  }
+//   state = {
+//     keywords: ''
+//   }
 
-inputChangeHandler = (event) => {
-  // event.preventDefault();
-  // for background to change we need to see this is empty or not 
+// inputChangeHandler = (event) => {
+//   // event.preventDefault();
+//   // for background to change we need to see this is empty or not 
 
-  this.setState({
+//   this.setState({
     
-    keywords: event.target.value
-  })
-}
-  render() {
-    //---playing with style
-    // const style = {
-    //   background: ''
-    // }
-    // if(this.state.keywords !== ''){
-    //   style.background = 'teal'
-    // }
-//-------------------
+//     keywords: event.target.value
+//   })
+// }
+//   render() {
+//     //---playing with style
+//     // const style = {
+//     //   background: '' 
+//     // }
+//     // if(this.state.keywords !== ''){
+//     //   style.background = 'teal'
+//     // }
+// //-------------------
+//       // console.log(this.props.keywords);
+//      return ( 
+      
+      
+//       <header >
+        
+//         <div className="logo navbar">Logo</div>
+//         <input 
+//           type="text"
+//          onClick={this.props.keywords}
+        
+//         />
+//       </header>
+//     )
+//     }
+// }
+//------ changing class header component to function
+import React from 'react';
+
+const Header = (props) => {
+ 
      return ( 
-      
-      
       <header >
         
-        <div className="logo">Logo</div>
-        <input type="text" onClick={this.inputChangeHandler}
+        <div className="logo navbar">Logo</div>
+        <input 
+          type="text"
+         onClick={props.keywords}
         
         />
       </header>
     )
     }
-}
-
 export default Header;

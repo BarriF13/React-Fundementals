@@ -21,4 +21,4 @@ const NewsList = ( props ) => {
   )
 }
 
-export default NewsList;
+export default NewsList; 
